@@ -1,4 +1,4 @@
 export const PREVIEW_PAGES = {
-  quiz: "Preview_quiz.html",
-  book: "Preview.html"
+  quiz: "preview_quiz.html",
+  book: "preview.html"
 };
