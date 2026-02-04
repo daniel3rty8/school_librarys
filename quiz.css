@@ -1,0 +1,366 @@
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background-color: #f7f8fa;
+    color: #1f2937;
+    line-height: 1.6;
+}
+/* ===== NAVIGATION ===== */
+.navigation1{
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    background-color:#f1f5f9;
+    top: 0;
+    z-index: 1000;
+    gap: 6rem;
+    justify-content: space-between;
+      align-items: center;
+       padding: 1rem 2rem;
+       
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: background-color 0.3s;
+}
+.navigation1 > div{
+    flex-grow: 1;
+    flex-basis: auto;
+}
+.navigation1  a{
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 500;
+    margin-right: 1.5rem;
+    transition: color 0.3s;
+}
+
+.navigation1 a:hover {
+    color: #2563eb;
+}
+
+
+/* ===== SEARCH ===== */
+.search_box {
+  position: relative;
+
+}
+#searchInput{
+  width: 180px;
+  height: 30px;
+  border-style: none;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  padding: 0 12px;
+  outline: none;
+  transition: width 0.3s, box-shadow 0.3s;
+}
+
+#searchInput:focus{
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+
+.search_results {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.search_results div {
+  padding: 6px;
+  cursor: pointer;
+   transition: background 0.2s;
+}
+
+.search_results div:hover {
+  background-color: #eff6ff;
+}
+.container {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 15px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 4px ;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 5px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* ===== MAIN CONTENT / BOOKS GRID ===== */
+.middle_div{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.logo_div {
+  padding: 10px;
+}
+
+
+.books_box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-auto-rows:minmax(350px,auto);
+    justify-content: center;
+      gap: 1.8rem;
+    width: 100%;
+}
+
+.books_box > a{
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #1f2937;
+    margin: 3px;
+    border-radius: 12px;
+     overflow: hidden;
+         box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.books_box > a:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+.image_box{
+    width: 100%;
+      height: 280px;
+    overflow: hidden;
+background-color: #e2e8f0;
+    
+    cursor: pointer;
+}
+
+.image_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      
+  transition: transform 0.3s ease;  
+}
+
+.books_name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem 0.2rem;
+}
+
+.books_dicription {
+    font-size: 0.95rem;
+    padding: 0 1rem 1rem;
+    color: #4b5563;
+    line-height: 1.4;
+}
+.btn {
+    border: none;
+    cursor: pointer;
+    padding: 6px 16px;
+    background-color: #2563eb;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+}
+.btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+.hide_butt{
+    display: none;
+}
+
+
+.show{
+    display: flex;
+}
+
+.books_name{
+   cursor: pointer;
+   margin-bottom:4px;
+   font-weight: 700;
+}
+.books_dicription{
+    font-size:1.1rem;
+    line-height: 1.4;
+    color: #4a4a4a;    
+}
+
+.object{
+    margin: 5px;
+}
+/* ===== FOOTER ===== */
+.site-footer {
+  background-color: #0f172a; /* dark blue */
+  color: #e5e7eb;
+  padding:  60px 20px 20px;
+   text-align: center;
+
+}
+
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 12px;
+  color: #f1f5f9;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+
+
+
+.navigation2{
+  background-color:#f1f5f9;
+   padding-top: 5px;
+   padding-bottom: 8px;
+   display: flex;
+   justify-content: center;
+   gap: 4px; 
+}
+
+#grade-level{
+  border-style: none;
+  padding: 3px 10px; 
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 860px) {
+    .navigation1 {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .middle_div {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .books_box {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .search_results {
+        max-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .books_box {
+        grid-template-columns: 1fr;
+    }
+    #searchInput {
+        width: 140px;
+    }
+    #searchInput:focus {
+        width: 180px;
+    }
+     .navigation2 {
+        flex-direction: column;
+        align-items: stretch;
+    }
+        .navigation2 .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .navigation2 select#grade-level {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .navigation1 > div.middle_div > div {
+        flex: 1 0 auto; /* mild growth for multiple links */
+        text-align: center;
+    }
+}
+@media (max-width:600px) {
+    .navigation1{    
+        flex-direction: column;
+        flex-wrap: nowrap;
+         
+          gap: 0;
+
+    }
+    .login_div, .middle_div{
+        margin-bottom: 10px;
+        display: none;
+         flex-direction: column;
+        flex-wrap: nowrap; 
+        align-items: center;
+        width: 100%;
+    }
+    .resize{
+        display: flex;
+    }
+    .container{
+        display: block;
+    }
+}

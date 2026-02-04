@@ -1,0 +1,295 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e5e7eb;
+}
+
+/* ================= BASE ================= */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ================= NAVIGATION ================= */
+.navigation1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: var(--card);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navigation1 a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.logo_div {
+  font-size: 1.2rem;
+}
+
+.middle_div {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.middle_div a:hover {
+  color: var(--primary);
+}
+
+/* ================= HAMBURGER ================= */
+.container {
+  display: none;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background: #333;
+  margin: 4px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translateY(-8px) rotate(45deg);
+}
+
+/* ================= QUIZ LAYOUT ================= */
+.thewholebody {
+  padding: 30px 16px;
+}
+
+.book_detail {
+  width: 100%;
+  max-width: 680px;
+  margin: auto;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= QUIZ CONTENT ================= */
+#quiz_container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quiz_header {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+}
+
+.question_no {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+/* ================= OPTIONS ================= */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  background: #f1f5f9;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.option-btn:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.option-btn:disabled {
+  cursor: default;
+  opacity: 0.95;
+}
+
+/* ================= NAV BUTTONS ================= */
+.btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn button {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  transition: 0.25s;
+}
+
+.btn button:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.down_read_btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+.btn button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* ================= QUIZ COUNTER ================= */
+.quiz_count {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ================= RESULT ================= */
+.result-box {
+  text-align: center;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.result-box h2 {
+  font-size: 1.6rem;
+  color: var(--success);
+  margin-bottom: 14px;
+}
+
+/* ================= ERROR ================= */
+.error-box {
+  text-align: center;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.error-box h2 {
+  color: var(--danger);
+  margin-bottom: 10px;
+}
+
+
+.error-box p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 18px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-style: none;
+}
+
+.back-btn:hover {
+  background: #d1d5db;
+}
+
+
+
+@media (max-width: 600px) {
+  .navigation1 {
+           flex-direction: column;
+        flex-wrap: nowrap;
+          gap: 10px;
+  }
+
+   .middle_div{
+        margin-bottom: 10px;
+        display: none;
+         flex-direction: column;
+        flex-wrap: nowrap; 
+        align-items: center;
+        width: 100%;
+    }
+  .logo_div {
+    display: flex;
+    align-items: start;
+    width: 100%;
+  }
+  .container {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+  }
+
+  .book_detail {
+    padding: 20px;
+  }
+
+
+}
+
+@media (max-width: 400px) {
+  .book_detail {
+    padding: 16px;
+  }
+  .btn{
+  display: flex;
+  flex-direction: column;
+}
+}

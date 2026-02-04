@@ -1,0 +1,315 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* ---------------- NAVIGATION ---------------- */
+.navigation1 {
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  background-color: #fef3c7;
+  top: 0;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/*.navigation1>div {
+  flex-grow: 1;
+  flex-basis: auto;
+  flex-shrink: 1;
+}
+
+.navigation1 a {
+  text-decoration: none;
+  color: black;
+
+}*/
+.logo_div a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 1.2rem;
+}
+/*
+.logo_div {
+  padding: 10px;
+}*/
+
+.middle_div {
+  display: flex;
+   gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.middle_div a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.middle_div a:hover {
+  color: #2563eb;
+}
+.container {
+  display: none;
+  cursor: pointer;
+}
+.container div {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background: #333;
+  margin: 4px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translateY(-11px) rotate(45deg);
+}
+
+
+
+
+
+/* ---------------- SEARCH ---------------- */
+.search_box {
+  position: relative;
+
+}
+
+
+.search_results {
+  position: absolute;
+  top: 110%;
+  width: 100%;
+  background: #fff;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.search_results div {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search_results div:hover {
+  background-color: #eee;
+}
+
+#searchInput {
+  width: 160px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  transition: width 0.3s;
+}
+
+#searchInput:focus {
+  width: 220px;
+  outline: none;
+  border-color: #2563eb;
+}
+/* ---------------- BOOK DETAIL ---------------- */
+.book_detail {
+    max-width: 700px;
+  width: 90%;
+  max-width: 600px;
+  background-color: #fefce8;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  gap: 1rem;
+}
+.book_detail img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.book_detail img:hover {
+  transform: scale(1.03);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+.details h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.details .curriculum {
+  font-weight: 500;
+  color: #2563eb; /* blue highlight */
+}
+
+.details .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.details .size {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+/* ---------------- DOWNLOAD / READ BUTTONS ---------------- */
+.start_back_btn {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.start_back_btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+
+}
+
+.start_back_btn button {
+ background-color: #2563eb; /* primary blue */
+  margin: 10px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  min-height: 40px;
+  max-width: 150px;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  border-radius: 8px;
+  text-decoration: none;
+   color: white;
+  border: 1px solid #2563eb;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+}
+
+.start_back_btn button:hover {
+    background-color: #1d4ed8; /* darker blue */
+ transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  /* ---------------- CANCEL OVERLAY ---------------- */
+.cancel_container {
+  top: 0;
+  left: 0;
+    width: 1000px;
+ height: 2000px;
+ background-color: #251f1f;
+  display: none;
+    max-width: 100%;
+ z-index: 2;
+  position: absolute;
+  opacity: 0.5;
+  height: 1000px;
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 480px) {
+  .start_back_btn button {
+    flex: 1 1 45%; /* buttons take roughly half width */
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation1 {
+    flex-direction: column;
+  }
+  .middle_div,
+  .login_div {
+    display: none;
+    flex-direction: column;
+  }
+
+  .hide_butt {
+    display: block;
+  }
+
+  .img {
+    height: auto;
+  }
+
+  .container {
+    display: block;
+    cursor: pointer;
+        position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  }
+
+}
+
+
+
+/* .img {
+  width: 100%;
+  max-width: 450px;
+  height: 300px;
+  margin: 10px;
+}
+
+.imgs {
+  width: 100%;
+  height: 100%;
+} */
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="quiz.css" />
+  <title>Quiz</title>
+</head>
+
+<body data-page="quiz">
+
+  <div class="navigation1" id="navigation1">
+    <div class="logo_div"><a href="index.html">logo</a></div>
+
+    <div class="container" id="container">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <div class="middle_div" id="middle_div">
+      <div><a href="index.html">Library</a></div>
+      <div><a href="#"  style="color: rgb(13, 187, 187);">Quiz</a></div>
+      <div><a href="about.html">About</a></div>
+    </div>
+
+    <div class="login_div" id="login_div">
+      <div class="search_box quiz-search">
+        <input type="text" id="searchInput" placeholder="Search quiz..." />
+        <div id="searchResults" class="search_results"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navigation2" id="navigation2">
+    <button class="btn" data-type="All">All</button>
+    <button class="btn" data-type="Textbook">Textbooks</button>
+    <button class="btn" data-type="PDF Notes">PDF Notes</button>
+    <button class="btn" data-type="Past Exam">Past Exam</button>
+
+    <select id="grade-level">
+      <option value="All">All grades</option>
+      <option value="grade9">Grade 9</option>
+      <option value="grade10">Grade 10</option>
+      <option value="grade11">Grade 11</option>
+      <option value="grade12">Grade 12</option>
+    </select>
+  </div>
+
+  <div class="books_box" id="books_box"></div>
+    <footer class="site-footer">
+      <div class="footer-container">
+
+        <div class="footer-section">
+          <h3>E-Library</h3>
+          <p>
+            A free educational digital library designed for secondary school students.
+            All resources are for learning purposes only.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home/library</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Textbooks</a></li>
+            <li><a href="#">PDF Notes</a></li>
+            <li><a href="#">Past Exams</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 E-Library. Educational use only.</p>
+      </div>
+    </footer>
+  <script type="module" src="quiz.js"></script>
+</body>
+</html>
